@@ -3,21 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Life Expectancy Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>AwatefBR - Life Expectancy Prediction 🌍 💙</title>
 </head>
 <body>
     <div class="container">
-        <h2>Life Expectancy Prediction</h2>
+        <h2>Life Expectancy Prediction 🌍 💙</h2>
         <form id="predictionForm">
-            <!-- Add input fields for features -->
             <label for="country">Country:</label>
-            <input type="text" id="country" name="country" required>
-
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select a Country</option>
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>            
             <label for="year">Year:</label>
-            <input type="number" id="year" name="year" required>
-
-            <!-- Add other input fields for features -->
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Select a Year</option>
+                {% for year in years %}
+                <option value="{{ year }}">{{ year }}</option>
+                {% endfor %}
+            </select>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="" disabled selected>Select a Status</option>
+                {% for status in status %}
+                <option value="{{ status }}">{{ status }}</option>
+                {% endfor %}
+            </select>
+            <label for="adultmortality">Adult Mortality:</label>
+            <select id="adultmortality" name="adult mortality" required>
+                <option value="" disabled selected>Select a value for Adult Mortality</option>
+                {% for value in adult mortality %}
+                <option value="{{ adult mortality }}">{{ adult mortality }}</option>
+                {% endfor %}
+            </select>
+            <label for="infantdeaths">Infant Deaths:</label>
+            <select id="infantdeaths" name="infant deaths" required>
+                <option value="" disabled selected>Select a value for Infant Deaths</option>
+                {% for year in infant deaths %}
+                <option value="{{ infant deaths }}">{{ infant deaths }}</option>
+                {% endfor %}
+            </select>
+            <label for="alcohol">Alcohol:</label>
+            <select id="alcohol" name="alcohol" required>
+                <option value="" disabled selected>Select a value for Alcohol</option>
+                {% for al in alcohol %}
+                <option value="{{ alcohol }}">{{ alcohol }}</option>
+                {% endfor %}
+            </select>
+            <label for="percentageExpenditure">Percentage Expenditure:</label>
+            <select id="percentageExpenditure" name="percentageExpenditure" required>
+                <option value="" disabled selected>Select a value for Percentage Expenditure</option>
+                {% for percentageExpenditureValue in percentageExpenditure %}
+                 <option value="{{ percentageExpenditureValue }}">{{ percentageExpenditureValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="hepatitisB">Hepatitis B:</label>
+            <select id="hepatitisB" name="hepatitisB" required>
+                <option value="" disabled selected>Select a value for Hepatitis B</option>
+                 {% for hepatitisBValue in hepatitisB %}
+                <option value="{{ hepatitisBValue }}">{{ hepatitisBValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="measles">Measles:</label>
+            <input type="number" id="measles" name="measles" placeholder="Enter a value for Measles (inferior to 120K)" required>
+            <select id="measles" name="measles" required>
+                <option value="" disabled selected>Select a value for Measles</option>
+                {% for measlesValue in measles %}
+                <option value="{{ measlesValue }}">{{ measlesValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="bmi">BMI:</label>
+            <select id="bmi" name="bmi" required>
+                <option value="" disabled selected>Select a value for BMI</option>
+                {% for bmiValue in bmi %}
+                <option value="{{ bmiValue }}">{{ bmiValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="underFiveDeaths">Under-Five Deaths:</label>
+            <select id="underFiveDeaths" name="underFiveDeaths" required>
+                <option value="" disabled selected>Select a value for Under-Five Deaths</option>
+                {% for underFiveDeathsValue in underFiveDeaths %}
+                <option value="{{ underFiveDeathsValue }}">{{ underFiveDeathsValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="polio">Polio:</label>
+            <select id="polio" name="polio" required>
+                <option value="" disabled selected>Select a value for Polio</option>
+                {% for polioValue in polio %}
+                <option value="{{ polioValue }}">{{ polioValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="totalExpenditure">Total Expenditure:</label>
+            <select id="totalExpenditure" name="totalExpenditure" required>
+                <option value="" disabled selected>Select a value for Total Expenditure</option>
+                {% for totalExpenditureValue in totalExpenditure %}
+                <option value="{{ totalExpenditureValue }}">{{ totalExpenditureValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="diphtheria">Diphtheria:</label>
+            <select id="diphtheria" name="diphtheria" required>
+                <option value="" disabled selected>Select a value for Diphtheria</option>
+                {% for diphtheriaValue in diphtheria %}
+                <option value="{{ diphtheriaValue }}">{{ diphtheriaValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="hivAids">HIV/AIDS:</label>
+            <select id="hivAids" name="hivAids" required>
+                <option value="" disabled selected>Select a value for HIV/AIDS</option>
+                {% for hivAidsValue in hivAids %}
+                <option value="{{ hivAidsValue }}">{{ hivAidsValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="gdp">GDP:</label>
+            <input type="number" id="gdp" name="population" placeholder="Enter a value for GDP (inferior to 120K)" required>
+            <label for="population">Population:</label>
+            <input type="number" id="population" name="population" placeholder="Enter a value for Population (inferior to 1.5 billion)" required>
+            <label for="thinness1to19Years">Thinness 1-19 Years:</label>
+            <select id="thinness1to19Years" name="thinness1to19Years" required>
+                <option value="" disabled selected>Select a value for Thinness 1-19 Years</option>
+                {% for thinness1to19YearsValue in thinness1to19Years %}
+                <option value="{{ thinness1to19YearsValue }}">{{ thinness1to19YearsValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="thinness5to9Years">Thinness 5-9 Years:</label>
+            <select id="thinness5to9Years" name="thinness5to9Years" required>
+                <option value="" disabled selected>Select a value for Thinness 5-9 Years</option>
+                {% for thinness5to9YearsValue in thinness5to9Years %}
+                <option value="{{ thinness5to9YearsValue }}">{{ thinness5to9YearsValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="incomeComposition">Income Composition of Resources:</label>
+            <select id="incomeComposition" name="incomeComposition" required>
+                <option value="" disabled selected>Select a value for Income Composition of Resources</option>
+                {% for incomeCompositionValue in incomeComposition %}
+                <option value="{{ incomeCompositionValue }}">{{ incomeCompositionValue }}</option>
+                {% endfor %}
+            </select>
+            <label for="schooling">Schooling:</label>
+            <select id="schooling" name="schooling" required>
+                <option value="" disabled selected>Select a value for Schooling</option>
+                {% for schoolingValue in schooling %}
+                <option value="{{ schoolingValue }}">{{ schoolingValue }}</option>
+                {% endfor %}
+            </select>
 
             <button type="button" onclick="predict()">Predict</button>
         </form>
