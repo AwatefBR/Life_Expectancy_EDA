@@ -1,7 +1,8 @@
-# LifeExpectancyProject
+# Life Expectancy
 
-### Welcome to the Life Expectancy Prediction Project! In this repository, you'll find an application designed to predict life expectancy based on various features:
+### Welcome to the Life Expectancy EDA! In this repository, you'll find various datasets and a notebook. The notebook comprehensively explores the datasets through data visualization techniques, providing insightful exploratory data analysis (EDA) visualizations. Additionally, it includes the training of predictive models for life expectancy based on the analyzed data.
 
+#### Features in the datasets
 - Country: The country for which the prediction is made.
 - Year: The year of observation.
 - Status: Whether the country is developed or developing.
@@ -42,29 +43,3 @@
 - For details on Exploratory Data Analysis (EDA) and data preprocessing, refer to the notebook: LifeExpectancyEDA+Models.ipynb.
 - Cleaned and preprocessed data is stored in the CSV file: data_train_preprocessed.csv.
 
-### Local Deployment Instructions:
-To deploy the app locally, follow these steps on your terminal:
-
-#### Create a virtual environment after saving this repository to a folder of your choice and install the required libraries:
-
-bash
-- mkdir life_expectancy
-- python -m venv .venv
-- source .venv/bin/activate
-- pip install -r requirements.twt
-
-
-#### Open Docker, build the image, and run it:
-
-bash
-- docker build -t my-app .
-- docker run -p 5000:5000 my-app
-
-#### Finally, at the root of the project folder, run:
-
-bash
-- python app/app.py
-
-#### Copy and paste the URL given by the terminal into your web browser to interact with the app.
-
-### Enjoy exploring the Life Expectancy Prediction App!
