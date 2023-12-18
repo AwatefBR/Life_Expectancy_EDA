@@ -47,7 +47,7 @@ To deploy the app locally, follow these steps on your terminal:
 
 ### Create a virtual environment after saving this repository to a folder of your choice and install the required libraries:
 
-- bash
+bash
 - mkdir life_expectancy
 - python -m venv .venv
 - source .venv/bin/activate
@@ -56,13 +56,13 @@ To deploy the app locally, follow these steps on your terminal:
 
 ### Open Docker, build the image, and run it:
 
-- bash
+bash
 - docker build -t my-app .
 - docker run -p 5000:5000 my-app
 
 ### Finally, at the root of the project folder, run:
 
-- bash
+bash
 - python app/app.py
 
 ### Copy and paste the URL given by the terminal into your web browser to interact with the app.
