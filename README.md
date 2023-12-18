@@ -25,18 +25,22 @@
 - Human Development Index (HDI): In terms of income composition of resources (index ranging from 0 to 1).
 - Years of Schooling: Number of years of schooling.
 
-### Various algorithms have been tested and evaluated, and a Random Forest Regressor was selected based on the Mean Absolute Error (MAE) metric. MAE is chosen for its robustness and sensitivity to prediction errors.
+### Various algorithms have been tested and evaluated, and a Random Forest Regressor was selected based on the Mean Absolute Error (MAE) metric. 
 
 ### Why use MAE as our metric?
-MAE is suitable for regression tasks where the goal is to predict continuous numerical values. It measures the average absolute difference between predicted and actual values, providing a robust measure of average prediction error. Its advantages include:
+- MAE is chosen for its robustness and sensitivity to prediction errors.
+- MAE is suitable for regression tasks where the goal is to predict continuous numerical values.
+- It measures the average absolute difference between predicted and actual values, providing a robust measure of average prediction error. 
 
-Less sensitivity to outliers compared to Mean Squared Error (MSE).
-Reports errors in the same scale as the target variable.
+#### Its advantages include:
+
+- Less sensitivity to outliers compared to Mean Squared Error (MSE).
+- Reports errors in the same scale as the target variable.
 
 ## Additional Information:
-The trained model is saved as a pickle file in the 'model' folder.
-For details on Exploratory Data Analysis (EDA) and data preprocessing, refer to the notebook: LifeExpectancyEDA+Models.ipynb.
-Cleaned and preprocessed data is stored in the CSV file: data_train_preprocessed.csv.
+- The trained model is saved as a pickle file in the 'model' folder.
+- For details on Exploratory Data Analysis (EDA) and data preprocessing, refer to the notebook: LifeExpectancyEDA+Models.ipynb.
+- Cleaned and preprocessed data is stored in the CSV file: data_train_preprocessed.csv.
 
 ### Local Deployment Instructions:
 To deploy the app locally, follow these steps on your terminal:
