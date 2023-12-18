@@ -27,7 +27,7 @@
 
 ### Various algorithms have been tested and evaluated, and a Random Forest Regressor was selected based on the Mean Absolute Error (MAE) metric. 
 
-### Why use MAE as our metric?
+#### Why use MAE as our metric?
 - MAE is chosen for its robustness and sensitivity to prediction errors.
 - MAE is suitable for regression tasks where the goal is to predict continuous numerical values.
 - It measures the average absolute difference between predicted and actual values, providing a robust measure of average prediction error. 
@@ -45,7 +45,7 @@
 ### Local Deployment Instructions:
 To deploy the app locally, follow these steps on your terminal:
 
-### Create a virtual environment after saving this repository to a folder of your choice and install the required libraries:
+#### Create a virtual environment after saving this repository to a folder of your choice and install the required libraries:
 
 bash
 - mkdir life_expectancy
@@ -54,17 +54,17 @@ bash
 - pip install -r requirements.twt
 
 
-### Open Docker, build the image, and run it:
+#### Open Docker, build the image, and run it:
 
 bash
 - docker build -t my-app .
 - docker run -p 5000:5000 my-app
 
-### Finally, at the root of the project folder, run:
+#### Finally, at the root of the project folder, run:
 
 bash
 - python app/app.py
 
-### Copy and paste the URL given by the terminal into your web browser to interact with the app.
+#### Copy and paste the URL given by the terminal into your web browser to interact with the app.
 
 ### Enjoy exploring the Life Expectancy Prediction App!
